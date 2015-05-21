@@ -12,8 +12,10 @@
                 <h1>欢迎使用综合服务系统</h1>
                 <div>
                     <div style="float: left">
+                        <a href="/board"> 排行榜 </a>
                         {% if g.user.is_authenticated() %}
-                            <a style="margin-left: 10px" href={{ url_for('home') }}> 管理页面 </a>
+                            <a style="margin-left: 10px" href='/'> 管理页面 </a>
+                            <a style="margin-left: 10px" href='/analyseBoard'> 解析榜单 </a>
                         {% endif %}
                     </div>
                     <div style="text-align: right">
