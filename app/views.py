@@ -91,7 +91,7 @@ def add_team():
     else:
         team_list = request.form['content'].split('\n')
         for team in team_list:
-            name, location = team.split()
+            name, location = team.split('\t')
             db.session.add(Team(name, location))
             db.session.commit()
             db.session.close()
