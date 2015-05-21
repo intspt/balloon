@@ -15,9 +15,9 @@
                         <td> 给 {{ send_balloon.team_name }}({{ send_balloon.team_location }}) 送 {{ BALLOON_COLOR[send_balloon.problem_id] }}色 气球 </td>
                         <td>
                             {% if send_balloon.is_sent %}
-                                <a href={{ url_for('change_status', sid=send_balloon.id_, status='false') }}> Y </a>
+                                <a href={{ url_for('change_status', sid=send_balloon.id_, status='false') }}> 是 </a>
                             {% else %}
-                                <a href={{ url_for('change_status', sid=send_balloon.id_, status='true') }}> N </a>
+                                <a href={{ url_for('change_status', sid=send_balloon.id_, status='true') }}> 否 </a>
                             {% endif %}
                         </td>
                     </tr>
