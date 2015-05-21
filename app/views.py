@@ -144,10 +144,7 @@ def analyse_board():
 @login_required
 @throw_exception
 def change_status():
-    if request.args['status'] == 'true':
-        SendBalloon.query.filter_by(id_=request.args['sid']).update({'is_sent': True})
-    else:
-        SendBalloon.query.filter_by(id_=request.args['sid']).update({'is_sent': False})
+    SendBalloon.query.filter_by(id_=request.args['sid']).update({'is_sent': True})
     db.session.commit()
     db.session.close()
     return redirect('/balloon')

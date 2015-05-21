@@ -2,11 +2,11 @@
 {% extends "base.html"%}
 {% block content %}
     <div>
-        <table class="table" style="margin:auto">
+        <table class="table" style="margin:auto; width: 100%">
             <thead>
                 <tr>
                 <th> 气球信息 </th>
-                <th> 是否发放 </th>
+                <th style="width: 69px"> 是否发放 </th>
                 </tr>
             </thead>
             <tbody>
@@ -15,9 +15,9 @@
                         <td> 给 {{ send_balloon.team_name }}({{ send_balloon.team_location }}) 送 {{ BALLOON_COLOR[send_balloon.problem_id] }}色 气球 </td>
                         <td>
                             {% if send_balloon.is_sent %}
-                                <a href={{ url_for('change_status', sid=send_balloon.id_, status='false') }}> 是 </a>
+                                <span> 是 <span>
                             {% else %}
-                                <a href={{ url_for('change_status', sid=send_balloon.id_, status='true') }}> 否 </a>
+                                <a href={{ url_for('change_status', sid=send_balloon.id_) }}> 否 </a>
                             {% endif %}
                         </td>
                     </tr>
