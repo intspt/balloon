@@ -21,7 +21,6 @@ def analyseBoard():
             problem_status_list = tr.find_all('td')[4: 4 + PROBLEM_NUM]
             team = Team.query.filter_by(name=team_name).first()
             for (i, problem_status) in enumerate(problem_status_list):
-                print problem_status.get_text()
                 if '/' in problem_status.get_text():
                     if ((team.problem_solved >> i) & 1) == 0:
                         problem_solved = Team.query.filter_by(name=team_name).first().problem_solved
