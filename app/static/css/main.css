@@ -1,0 +1,100 @@
+#wrapper {
+    position: relative;
+    width: 70%;
+    top: 20px;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 auto;
+
+}
+.form-group {
+    margin:0 auto;
+    width: 80%;
+}
+.print-content-form {
+
+}
+.print-content-form span {
+    display: block;
+}
+.team-add-form {
+    margin: 0 auto
+}
+.team-add-text {
+    width: 80%;
+}
+.print-content-text {
+    width: 90%;
+    overflow-y:visible;
+}
+.red {
+    color: red;
+}
+
+.label{
+    display: inline-block;
+    width: 200px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.tl {
+    text-align: left;
+}
+.tr {
+    text-align: right;
+}
+.tc {
+    text-align: center;
+}
+.pa {
+    position: absolute;
+}
+.pr {
+    position: relative;
+}
+
+.list-style {
+    padding: 20px;
+}
+thead {
+    display: table-header-group;
+}
+
+button{
+  margin-bottom: 10px;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.5;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+.table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+}
+
+.color{
+  width: 30%;
+}
+
+.lay-left{
+  width: 45%;
+  float: left;
+}
+
+.lay-right{
+  width: 50%;
+  float: right;
+}

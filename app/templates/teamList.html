@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+    <a name="top" ></a>
+    <div class="list-style">
+        <table class="table" style="margin:auto;">
+            <thead>
+                <tr>
+                    <th> 编号 </th>
+                    <th> 队伍号 </th>
+                    <th> 座位信息 </th>
+                    <th> 删除 </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for team in team_list %}
+                    <tr>
+                    <td> {{ team.id_ }} </td>
+                    <td> {{ team.name }} </td>
+                    <td> {{ team.location }} </td>
+                    <td><a href="{{ url_for('delete_team', tid = team.id_) }}"> 删除 </a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <a href="#top"> 返回顶部 </a>
+{% endblock %}
