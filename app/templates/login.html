@@ -6,14 +6,13 @@
     {% endif %}
     {% endwith %}
     <form action='/login' method="POST">
-        <div class="row">
-        <label class="label">User Name:</label>
+        <center>
+        <label class="label" style="color:black">User Name:</label>
         <input type="text" name="name"></input>
         <br/>
-        <label class="label">Password:</label>
-        <input type="password" name="password"></input>
+        <label class="label" style="color:black">Password:</label>
+        <input type="password" name="password" ></input>
         <br/>
-        <button type="submit"> 登录 </button>
-        </div>
+        <button type="submit"> 登录 </button></center>
     </form>
 {% endblock %}
