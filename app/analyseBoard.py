@@ -17,8 +17,9 @@ def analyseBoard():
         board = BeautifulSoup(open(BOARD_ADDR, 'r').read())
         tr_list = board.find_all(style="border-bottom: 1px solid black;height: 42px;")
         for tr in tr_list:
-            team_name = tr.find_all('td')[1].get_text().split('\n')[0]
-            problem_status_list = tr.find_all('td')[4: 4 + PROBLEM_NUM]
+            td_list = tr.find_all('td')
+            team_name = td_list[1].get_text().split('\n')[0]
+            problem_status_list = td_list[4: 4 + PROBLEM_NUM]
             team = Team.query.filter_by(name=team_name).first()
             team_location, team_problem_solved = team.location, team.problem_solved
             for (i, problem_status) in enumerate(problem_status_list):
