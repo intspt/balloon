@@ -126,7 +126,6 @@ def delete_team():
 @throw_exception
 def balloon():
     send_balloon_list = SendBalloon.query.order_by(SendBalloon.id_.desc()).all()
-    print send_balloon_list
     return render_template('balloon.html', send_balloon_list=send_balloon_list, BALLOON_COLOR=BALLOON_COLOR)
 
 
