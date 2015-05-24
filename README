@@ -18,3 +18,4 @@ pip install -r requirements.txt
 config.py中有一些可以更改的配置
 其中气球颜色列表与题目总数必须修改
 使用前运行init.py初始化数据库
+请手动输入/login进行登录
