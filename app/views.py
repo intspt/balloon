@@ -129,16 +129,6 @@ def balloon():
     return render_template('balloon.html', send_balloon_list=send_balloon_list, BALLOON_COLOR=BALLOON_COLOR)
 
 
-
-@app.route('/analyseBoard')
-@login_required
-@throw_exception
-def analyse_board():
-    analyseBoard()
-    return redirect('/balloon')
-
-
-
 @app.route('/changeStatus')
 @login_required
 @throw_exception
@@ -147,3 +137,11 @@ def change_status():
     db.session.commit()
     db.session.close()
     return redirect('/balloon')
+
+
+@app.route('/printBalloon')
+@login_required
+@throw_exception
+def printBalloon():
+    send_balloon_list = SendBalloon.query.order_by(SendBalloon.id_.desc()).all()
+    return render_template('printBalloon.html', send_balloon_list=send_balloon_list, BALLOON_COLOR=BALLOON_COLOR)
