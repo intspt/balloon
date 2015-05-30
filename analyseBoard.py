@@ -30,8 +30,9 @@ def analyseBoard():
                         Team.query.filter_by(name=team_name).update({'problem_solved': problem_solved | (1 << i)})
                         send_balloon = SendBalloon(team_name, i, team_location)
                         db.session.add(send_balloon)
-                        db.session.commit()
-                        db.session.close()
+
+        db.session.commit()
+        db.session.close()
 
 if __name__ == '__main__':
     analyseBoard()
