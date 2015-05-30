@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #-*- coding:utf-8 -*-
 
 import os, re
@@ -6,7 +7,7 @@ from bs4 import BeautifulSoup
 
 from app import db
 from config import BOARD_ADDR, PROBLEM_NUM
-from models import Team, SendBalloon
+from app.models import Team, SendBalloon
 
 
 
@@ -31,3 +32,6 @@ def analyseBoard():
                         db.session.add(send_balloon)
                         db.session.commit()
                         db.session.close()
+
+if __name__ == '__main__':
+    analyseBoard()

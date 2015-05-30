@@ -143,5 +143,5 @@ def change_status():
 @login_required
 @throw_exception
 def printBalloon():
-    send_balloon_list = SendBalloon.query.order_by(SendBalloon.id_.desc()).all()
+    send_balloon_list = SendBalloon.query.filter_by(is_sent=False).all()
     return render_template('printBalloon.html', send_balloon_list=send_balloon_list, BALLOON_COLOR=BALLOON_COLOR)
